@@ -1,0 +1,247 @@
+/* assets/style.css - APIS Chhattisgarh government theme */
+
+:root {
+  --bg: #f4f5f7;
+  --panel: #ffffff;
+  --border-soft: #dde2e8;
+  --muted: #6b7280;
+  --accent: #0f5faf;           /* primary blue */
+  --accent-soft: #e3effc;
+  --accent-strong: #0b3f73;
+  --chip: #f5efe1;             /* subtle saffron band */
+  --danger: #b91c1c;
+  --radius-lg: 14px;
+  --shadow-soft: 0 14px 40px rgba(15, 31, 55, 0.12);
+  --shadow-card: 0 10px 28px rgba(15, 31, 55, 0.16);
+}
+
+body,
+.stApp {
+  background: radial-gradient(circle at top left, #fdfdfd 0, #f2f4f7 45%, #e4e7ec 100%);
+  color: #111827;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- Shell layout ---------- */
+
+.app-shell {
+  margin-bottom: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 22px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f5f7fb 55%, #e3edf9 100%);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 -26px 0;
+  height: 14px;
+  background-image: linear-gradient(90deg, #136fba 0, #f4b41a 50%, #0b915a 100%);
+  opacity: 0.85;
+}
+
+.app-gov-seal {
+  min-width: 76px;
+  min-height: 76px;
+  border-radius: 50%;
+  border: 2px solid #d5d7dd;
+  background:
+    radial-gradient(circle at 30% 20%, #ffffff 0, #f7fafc 45%, #e5e7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #374151;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
+}
+
+.app-header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-gov-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.app-brand-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.app-brand-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.app-header-side {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.app-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--chip);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7a5a16;
+}
+
+.app-quick-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.app-quick-actions span {
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 95, 175, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--accent-strong);
+}
+
+.app-page-title {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.app-page-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Sidebar styling ---------- */
+
+section[data-testid="stSidebar"] > div {
+  background: radial-gradient(circle at top left, #f5f7fb 0, #ecf1f7 55%, #dde5f0 100%);
+  border-right: 1px solid var(--border-soft);
+  color: #111827;
+}
+
+section[data-testid="stSidebar"] .sidebar-header {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+section[data-testid="stSidebar"] .nav-group-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+  color: #9ca3af;
+}
+
+section[data-testid="stSidebar"] a {
+  font-size: 13px;
+  color: #111827 !important;
+}
+
+.stButton > button {
+  background: linear-gradient(135deg, #0f5faf 0, #0b4783 100%);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  box-shadow: 0 10px 25px rgba(15, 95, 175, 0.35);
+  font-weight: 500;
+}
+
+.stButton > button:hover {
+  background: linear-gradient(135deg, #145ea3 0, #0b3f73 100%);
+}
+
+.stButton > button:focus {
+  outline: 2px solid rgba(15, 95, 175, 0.6);
+  outline-offset: 1px;
+}
+
+/* ---------- Metric plaques & cards ---------- */
+
+.metric-plaques {
+  background: linear-gradient(145deg, #ffffff 0, #f3f6fb 50%, #e6edf9 100%);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #111827;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-soft);
+}
+
+.map-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-soft);
+}
+
+.table-header {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 11px;
+  border: 1px solid rgba(15, 95, 175, 0.26);
+}
+
+.badge-danger {
+  background: #fee2e2;
+  color: var(--danger);
+  border-color: #fecaca;
+}
+
+/* Forms & widgets */
+
+input, textarea, select {
+  border-radius: 8px !important;
+}
+
+.stTextInput > div > div > input,
+.stFileUploader > div,
+.stSelectbox > div > div {
+  border-radius: 10px !important;
+  border-color: var(--border-soft) !important;
+}
+
+/* Smaller captions */
+
+.caption-muted {
+  font-size: 11px;
+  color: var(--muted);
+}
